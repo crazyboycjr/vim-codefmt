@@ -14,7 +14,8 @@ examples.
 
   :call codefmt#SetWhetherToPerformIsAvailableChecksForTesting(0)
 
-The zprint formatter expects the zprint executable to be installed on your system.
+The zprint formatter expects the zprint executable to be installed on your
+system.
 
   :FormatCode zprint
   ! cd .* zprint .*
@@ -94,8 +95,9 @@ try to change directories:
   :set filetype=clojure
   :FormatCode
   ! zprint .*
+  $ no-op
   :set filetype&
-  :0file
+  :silent 0file
 
 The default setting of zprint_options propagates Vim's textwidth setting to
 zprint's command-line.

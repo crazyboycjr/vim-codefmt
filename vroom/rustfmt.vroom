@@ -15,7 +15,8 @@ examples.
   :call codefmt#SetWhetherToPerformIsAvailableChecksForTesting(0)
 
 
-The rustfmt formatter expects the rustfmt executable to be installed on your system.
+The rustfmt formatter expects the rustfmt executable to be installed on your
+system.
 
   % fn main(){println!("Hello World!");}
   :FormatCode rustfmt
@@ -67,6 +68,7 @@ Errors are reported using the quickfix list.
   |  |           - ^\n
   |  |           |\n
   |  |           un-closed delimiter'
+  ~ (1 of 1): this file contains an un-closed delimiter
   fn main() {
   @end
   :echomsg line('.') . ',' . col('.')

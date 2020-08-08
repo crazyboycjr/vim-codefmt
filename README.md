@@ -23,7 +23,7 @@ helpfiles in the `doc/` directory. The helpfiles are also available via
 * JavaScript (clang-format or [prettier](https://prettier.io))
 * JSON (js-beautify)
 * Proto (clang-format)
-* Python (Autopep8 or YAPF)
+* Python (Autopep8, Black, or YAPF)
 * Rust ([rustfmt](https://github.com/rust-lang/rustfmt))
 * TypeScript (clang-format)
 * Shell (shfmt)
@@ -32,7 +32,8 @@ helpfiles in the `doc/` directory. The helpfiles are also available via
 # Commands
 
 Use `:FormatLines` to format a range of lines or use `:FormatCode` to format
-the entire buffer. Use `:NoAutoFormatBuffer` to disable current buffer formatting.
+the entire buffer. Use `:NoAutoFormatBuffer` to disable current buffer
+formatting.
 
 # Usage example
 
@@ -81,7 +82,7 @@ Want to just sit back and let autoformat happen automatically? Add this to your
 ```vim
 augroup autoformat_settings
   autocmd FileType bzl AutoFormatBuffer buildifier
-  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType c,cpp,proto,javascript,arduino AutoFormatBuffer clang-format
   autocmd FileType dart AutoFormatBuffer dartfmt
   autocmd FileType go AutoFormatBuffer gofmt
   autocmd FileType gn AutoFormatBuffer gn

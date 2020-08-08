@@ -30,7 +30,8 @@ The path to the autopep8 executable.
 Default: 'autopep8' `
 
                                              *codefmt:clang_format_executable*
-The path to the clang-format executable.
+The path to the clang-format executable. String, list, or callable that takes
+no args and returns a string or a list.
 Default: 'clang-format' `
 
                                                   *codefmt:clang_format_style*
@@ -52,6 +53,10 @@ Default: 'dartfmt' `
                                               *codefmt:js_beautify_executable*
 The path to the js-beautify executable.
 Default: 'js-beautify' `
+
+                                                     *codefmt:black_executable*
+The path to the black executable.
+Default: 'black' `
 
                                                      *codefmt:yapf_executable*
 The path to the yapf executable.
@@ -77,7 +82,8 @@ Google's style. See https://github.com/mvdan/sh for details.
 Default: ['-i', '2', '-sr', '-ci'] `
 
                                                     *codefmt:shfmt_executable*
-The path to the shfmt executable.
+The path to the shfmt executable. String, list, or callable that takes no args
+and returns a string or a list.
 Default: 'shfmt' `
 
                                                     *codefmt:prettier_options*
@@ -162,7 +168,7 @@ The current list of defaults by filetype is:
   * fish: fish_indent
   * gn: gn
   * go: gofmt
-  * python: autopep8, yapf
+  * python: autopep8, black, yapf
 
 ==============================================================================
 DICTIONARIES                                                   *codefmt-dicts*

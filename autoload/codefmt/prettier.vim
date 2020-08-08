@@ -65,12 +65,12 @@ function! codefmt#prettier#GetFormatter() abort
   " {endline}.
   function l:formatter.FormatRange(startline, endline) abort
     let l:cmd = codefmt#formatterhelpers#ResolveFlagToArray(
-          \ 'prettier_executable') + ['--stdin', '--no-color']
+          \ 'prettier_executable') + ['--no-color']
 
     " prettier is able to automatically choose the best parser if the filepath
-    " is provided. Otherwise, fall back to the previous default: babylon.
+    " is provided. Otherwise, fall back to the previous default: babel.
     if @% == ""
-      call extend(l:cmd, ['--parser', 'babylon'])
+      call extend(l:cmd, ['--parser', 'babel'])
     else
       call extend(l:cmd, ['--stdin-filepath', expand('%:p')])
     endif
